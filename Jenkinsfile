@@ -2,6 +2,7 @@ pipeline {
   agent { label 'linux' }
 
   options {
+    disableRestartFromStage()
     disableConcurrentBuilds()
     /* Necessary for logos-side-builder local_folder source type. */
     checkoutToSubdirectory('src')
